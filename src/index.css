@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@font-face {
+  font-family: "The Seasons";
+  src: url("/src/assets/The\ Seasons\ Light.ttf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: white;
+  color: #81745a;
+  overflow-x: hidden;
+  color: var(--fontPrimaryColor);
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.link-styles {
+  text-decoration: none;
+  color: var(--fontPrimaryColor);
+}
+
+:root {
+  --primaryColor: #4fa4d6;
+  --primaryBackgroundColor: white;
+  --secondaryBackgroundColor: rgb(226, 226, 226);
+  --trPrimaryBackgroundColor: #ffffff9a;
+  --secondaryBgColor: rgb(255, 255, 255);
+  --fontPrimaryColor: #1f1f1f;
+  --fontSecondaryColor: #4e4e4e;
+  --shadowColor: #b3b3b3;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+body::-webkit-scrollbar-track {
+  background: var(--primaryBackgroundColor);
+  transition: 0.3s;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--fontSecondaryColor);
+  transition: 0.3s;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--fontPrimaryColor);
+  transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #a9d7f1;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #2f7bad;
+}
