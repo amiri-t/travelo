@@ -216,7 +216,7 @@ const Container = styled.div`
       gap: 2em;
       padding: 20px 7%;
       height: 60vh;
-      max-height: 500px;
+      max-height: 600px;
       img {
         width: 45%;
         border-radius: 30px;
@@ -311,6 +311,7 @@ const Container = styled.div`
   @media (max-width: 870px) {
     .items {
       .item {
+        padding: 10px 7%;
         display: flex;
         flex-direction: column;
         height: 80vh;
@@ -320,6 +321,15 @@ const Container = styled.div`
         }
         span {
           align-items: center;
+          p {
+            max-height: 80px;
+            overflow-y: scroll;
+          }
+          button {
+            align-self: center;
+            align-items: center;
+            margin: auto;
+          }
         }
       }
       .reversed {

@@ -1,37 +1,94 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import serviceImg from "../../assets/homeAssets/servicesImg.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      animation.start("visible");
+    }
+    // eslint-disable-next-line
+  }, [isInView]);
   return (
     <Container>
       <div className="left">
-        <h1>What services we provide</h1>
+        <motion.h1
+          variants={{
+            hidden: { opacity: 0, y: 100 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={animation}
+          transition={{ duration: 0.4, delay: 0.2, type: "spring" }}
+        >
+          What services we provide
+        </motion.h1>
         <div>
-          <span>
+          <motion.span
+            ref={ref}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation}
+            transition={{ duration: 0.4, delay: 0.5, type: "spring" }}
+          >
             <h2>Travel Plan</h2>
             <p>
               Travel plane are not really an instruemnt themselves but a
               delivery mechanism or strategy for other mostly
             </p>
-          </span>
-          <span>
+          </motion.span>
+          <motion.span
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation}
+            transition={{ duration: 0.4, delay: 0.7, type: "spring" }}
+          >
             <h2>Flight Booking</h2>
             <p>
               Discover your next destination. Find deals on domestic and
               international flights.
             </p>
-          </span>
-          <span>
+          </motion.span>
+          <motion.span
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={animation}
+            transition={{ duration: 0.4, delay: 0.9, type: "spring" }}
+          >
             <h2>Accommodation</h2>
             <p>
               Looking for the best hotels with great deals? No need to look
               further, we got you back in this one too
             </p>
-          </span>
+          </motion.span>
         </div>
       </div>
-      <img src={serviceImg} alt="" />
+      <motion.img
+        variants={{
+          hidden: { opacity: 0, scale: 0.5 },
+          visible: { opacity: 1, scale: 1 },
+        }}
+        initial="hidden"
+        animate={animation}
+        transition={{ duration: 0.4, delay: 0.9, type: "spring" }}
+        src={serviceImg}
+        alt=""
+      />
     </Container>
   );
 };

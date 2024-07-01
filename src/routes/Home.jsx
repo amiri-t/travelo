@@ -6,6 +6,9 @@ import SearchSection from "../components/homeComponents/SearchSection";
 import PopularDestinations from "../components/homeComponents/PopluarDestinations";
 import ThemeTours from "../components/homeComponents/ThemeTours";
 import Services from "../components/homeComponents/Services";
+import FAQ from "../components/homeComponents/FAQ";
+import ContactSection from "../components/homeComponents/ContactSection";
+import OfferOfTheWeek from "../components/homeComponents/OfferOfTheWeek";
 
 const Home = () => {
   return (
@@ -15,8 +18,11 @@ const Home = () => {
       <SearchSection />
       {/* Offer of the week section */}
       <PopularDestinations />
-      <ThemeTours />
       <Services />
+      <ThemeTours />
+      <OfferOfTheWeek />
+      <FAQ />
+      <ContactSection />
     </Container>
   );
 };
